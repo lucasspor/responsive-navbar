@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+
+    padding: 2rem;
+
+}
+
+button {
+    display: none;
+
+    background: transparent;
+    border: none;
+
+    transition:  transform 1s ease;
+    height: 2rem;
+}
+
+.hamburguer {
+    position: relative;
+
+    cursor: pointer;
+
+    width: 2rem;
+    height: .2rem;
+
+    background-color: blue;
+
+}
+
+.hamburguer::after {
+    content: '';
+
+    position: absolute;
+    top: .4rem;
+    left: 0;
+
+    width: 2rem;
+    height: .25rem;
+
+    background-color: blue;
+}
+
+.hamburguer::before {
+    content: '';
+
+    position: absolute;
+    bottom: .4rem;
+    left: 0;
+
+    width: 2rem;
+    height: .25rem;
+
+    background-color: blue;
+}
+
+button:hover{
+    transform: rotate(90deg);
+}
+
+
+ul{
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+ul a {
+    color: #010101;
+    text-decoration: none;
+}
+
+.social{
+    display: flex;
+    gap: 2rem;
+}
+
+.social > a {
+    text-decoration: none;
+    color: #010101;
+}
+
+
+@media (max-width: 1024px) {
+    button{
+        display: block;
+    }
+}
