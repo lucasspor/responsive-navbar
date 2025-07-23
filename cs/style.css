@@ -6,7 +6,7 @@
 
 header {
     background-color: #FFA246;
-    border-radius:0 0 40px 40px;
+    border-radius: 0 0 40px 40px;
     padding: 1rem 5rem;
 
 }
@@ -18,65 +18,102 @@ header {
     background: transparent;
     border: none;
 
-    transition:  transform 1s ease;
+    transition: transform 1s ease;
     height: 2rem;
+
 }
 
-#menu:hover{
+
+#menu:hover {
     transform: rotate(90deg);
 }
 
-nav{
+#menu #close {
+    display: none;
+}
+
+#menu.isActive #close {
+    display: inline;
+}
+
+#menu.isActive #open {
+    display: none;
+}
+
+
+nav {
     display: flex;
     justify-content: space-between;
 }
 
-ul{
+#navigation {
     list-style-type: none;
     display: flex;
     align-items: center;
     gap: 5rem;
 }
 
-ul a {
+#navigation a {
     color: #ffffff;
     font-weight: bold;
     text-decoration: none;
 }
 
-.social{
-    display: flex;
+#navigation a:hover{
+    
+}
+
+#social {
     align-items: center;
     gap: 2rem;
 }
 
-.social > a {
+#social>a {
     text-decoration: none;
     color: #010101;
 }
 
-.icon{
+.icon {
     font-size: 20px;
     color: #ffffff;
 }
 
 @media (max-width: 1020px) {
-    nav{
+    nav {
         flex-direction: column;
+        position: relative;
     }
 
-    .topnav{
+    .topnav {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    #menu{
+    #menu {
         display: block;
     }
 
+    #navigation,
+    #social {
+        opacity: 0;
+        transform: translateY(-20px);
+        position: absolute;
+        transition: transform 1s ease-in-out;
+        pointer-events: none;
+    }
 
-    ul{
+    #navigation.isActive,
+    #social.isActive {
+        opacity: 1;
+        position: static;
+        transform: translateY(0);
+        pointer-events: auto;
+
+
+    }
+
+    #navigation {
         flex-direction: column;
         align-items: start;
         gap: 1rem;
@@ -84,11 +121,7 @@ ul a {
         margin: 2rem 0;
     }
 
-    .social{
+    #social {
         justify-content: end;
-    }
-
-    .isActive{
-        display: none;
     }
 }
