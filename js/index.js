@@ -1,12 +1,9 @@
 const menu = document.querySelector("#menu")
-const navigation = document.querySelector("#navigation")
-const social = document.querySelector("#social")
+const header = document.querySelector('header')
 
 
 
 menu.addEventListener('click', () => {
-    menu.classList.toggle("isActive")
-    social.classList.toggle("isActive")
-    navigation.classList.toggle("isActive")
+    header.classList.toggle("isActive")
 
 })
