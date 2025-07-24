@@ -32,11 +32,11 @@ header {
     display: none;
 }
 
-#menu.isActive #close {
+header.isActive #menu #close {
     display: inline;
 }
 
-#menu.isActive #open {
+header.isActive #open {
     display: none;
 }
 
@@ -59,11 +59,12 @@ nav {
     text-decoration: none;
 }
 
-#navigation a:hover{
-    
+#navigation a:hover {
+    color: #f1f1f1;
 }
 
 #social {
+    display: flex;
     align-items: center;
     gap: 2rem;
 }
@@ -79,6 +80,25 @@ nav {
 }
 
 @media (max-width: 1020px) {
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #FFA246;
+        box-shadow: 0 0 0 transparent;
+        overflow: hidden;
+
+        height: 60px;
+        transition: height 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    header.isActive {
+        height: 250px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
     nav {
         flex-direction: column;
         position: relative;
@@ -99,12 +119,11 @@ nav {
         opacity: 0;
         transform: translateY(-20px);
         position: absolute;
-        transition: transform 1s ease-in-out;
         pointer-events: none;
     }
 
-    #navigation.isActive,
-    #social.isActive {
+    header.isActive #navigation,
+    header.isActive #social {
         opacity: 1;
         position: static;
         transform: translateY(0);
@@ -123,5 +142,6 @@ nav {
 
     #social {
         justify-content: end;
+        gap: .5rem;
     }
 }
