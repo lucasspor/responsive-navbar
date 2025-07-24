@@ -87,7 +87,7 @@ Para mais detalhes, consulte o arquivo `LICENSE`.
 
 Desenvolvido por **Lucas Silva**  
 
-- GitHub: [https://github.com/seunome](https://github.com/seunome)  
-- LinkedIn: [https://linkedin.com/in/seulinkedin](https://linkedin.com/in/seulinkedin)
+- GitHub: [https://github.com/seunome](https://github.com/lucasspor)  
+- LinkedIn: [https://linkedin.com/in/seulinkedin](https://linkedin.com/in/lucasspor)
 
 ---
